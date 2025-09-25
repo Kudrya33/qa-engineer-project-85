@@ -1,1 +1,117 @@
+- summary: |
+    Сайт должен быть способен обрабатывать большое количество трафика (например, 1000 одновременных пользователей)
+  requirement: |
+    При большом количестве трафика сайт корректно работает
+  prerequisites: |
+    В браузере Chrome открыта страница https://www.google.com
+    Открыт DevTool на вкладке Network
+  test-data: |
+    URL адресс = https://codebattle.hexlet.io/
+    Параметр throttling = 3G
+  steps:
+    - Переходим на страницу сайта https://codebattle.hexlet.io/
+    - Устанавливаем в DevTool во вкладке Network значение throttling на 3G
+    - Обновляем страницу
+  expected-result: |
+    Сайт должен загрузиться без ошибок за время менее 10ms
 
+- summary: |
+    Сайт должен быть разработан с учетом удобства использования и оптимизирован для скорости работы
+  requirement: |
+    Сайт удобен в использовании и оптимизирован в скорости работы
+  prerequisites: |
+    В браузере Chrome открыта страница https://www.google.com
+    Открыт DevTool на вкладке Network
+  test-data: |
+    URL адресс = https://codebattle.hexlet.io/
+    Параметр throttling = 3G
+  steps:
+    - Переходим на страницу сайта https://codebattle.hexlet.io/
+    - Устанавливаем в DevTool во вкладке Network значение throttling на 3G
+    - Обновляем страницу
+    - Оцениваем удобство сайта
+  expected-result: |
+    Сайт должен быть удобен и загрузиться без ошибок за время менее 10ms
+
+- summary: |
+    Сайт должен быть безопасным и защищать данные пользователя
+  requirement: |
+    Сайт работает на https, данные пользователя защищены
+  prerequisites: |
+    В браузере Chrome открыта страница https://www.google.com
+    Открыт DevTool на вкладке Network
+  test-data: |
+    URL адресс = https://codebattle.hexlet.io/
+  steps:
+    - Переходим на страницу сайта https://codebattle.hexlet.io/
+    - Смотрим работает ли сайт по протоколу https
+    - Нажимаем кнопку sign in
+    - Нажимаем кнопку sign in with GitHub
+    - Через DevTool вкладку Network проверяем что данные пользователя не передаются в открытом виде
+  expected-result: |
+    Сайт должен работать по протоколу https, данные пользователя должны быть защищены
+
+- summary: |
+    Сайт должен быть удобным на мобильном устройстве
+  requirement: |
+    Сайт корректно работает на мобильном устройстве
+  prerequisites: |
+    Мобильное устройство Android
+    В браузере Chrome открыта страница https://www.google.com
+  test-data: |
+    URL адресс = https://codebattle.hexlet.io/
+  steps:
+    - Переходим на страницу сайта https://codebattle.hexlet.io/
+    - Проверяем удобство использования сайта
+  expected-result: |
+    Сайт удобен для использования на мобильном устройстве
+
+- summary: |
+    Сайт должен быть протестирован на совместимость с последними версиями браузеров
+  requirement: |
+    Сайт работает на всех последних версиях браузеров
+  prerequisites: |
+    Установленны браузеры Chrome, Opera, FireFox
+    В браузере открыта страница https://www.google.com
+  test-data: |
+    URL адресс = https://codebattle.hexlet.io/
+  steps:
+    - Переходим на страницу сайта https://codebattle.hexlet.io/
+    - Проверяем совместимость сайта
+    - Повторяем шаг 1 и 2 на всех браузерах
+  expected-result: |
+    Сайт совместим с браузером
+
+- summary: |
+    Сайт должен корректно отображать контент
+  requirement: |
+    Контент отображается корректно
+  prerequisites: |
+    В браузере открыта страница https://www.google.com
+  test-data: |
+    URL адресс = https://codebattle.hexlet.io/
+  steps:
+    - Переходим на страницу сайта https://codebattle.hexlet.io/
+    - Проверяем корректность отображения контента
+    - Нажимаем create a game
+    - Выбираем level 1, with a bot, time control  10min, Choose task by name or tags random
+    - Проверяем корректность отображения контента
+  expected-result: |
+    Контент отображается корректно
+
+- summary: |
+    Пользовательский интерфейс должен быть интуитивно понятным
+  requirement: |
+    Интерфейс интуитивно понятен
+  prerequisites: |
+    В браузере открыта страница https://www.google.com
+  test-data: |
+    URL адресс = https://codebattle.hexlet.io/
+  steps:
+    - Переходим на страницу сайта https://codebattle.hexlet.io/
+    - Проверяем интуитивность интерфейса
+    - Нажимаем create a game
+    - Выбираем level 1, with a bot, time control  10min, Choose task by name or tags random
+    - Проверяем интуитивность интерфейса
+  expected-result: |
+    Интерфейс интуитивно понятен
